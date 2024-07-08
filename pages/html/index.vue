@@ -53,7 +53,161 @@
     <p>divタグは、HTMLの一部を切り出して、その一部に対してclassなどを個別に設定するタグです。</p>
     <h2>spanタグ</h2>
     <p>spanタグは、ある要素の中身の一部を切り出して、個別にclassなどを設定するタグです。</p>
-    <h2>タグ</h2>
+    <h2>imgタグ</h2>
     <p>imgタグは画像を表示するタグです。リンクになっているのでリンク切れを起こす可能性があります。<br>そのときには"alt"属性に設定されている代替テキストが表示されます。また、終了タグはありません。</p>
+    <h2>buttonタグ</h2>
+    <p>buttonタグは、ボタンを表すタグです。タグに囲まれた文字がボタンの中身として表示されます。</p>
+    <Example>
+      <button>Button</button>
+    </Example>
+    <h2>inputタグ</h2>
+    <p>inputタグはさまざまなフォームの入力部品をかけるタグです</p>
+    <h2>formタグ</h2>
+    <p>フォームの範囲を指定するタグです</p>
+    <h2>labelタグ</h2>
+    <p>inputタグに対応するラベルを定義するタグです。</p>
+    <Example>
+      <form>
+        <label for="btn1">button</label>
+        <input type="button" value="button1" name="btn1" />
+        <br />
+        <label for="chk1">checkbox</label>
+        <input type="checkbox" name="chk1" />
+        <br />
+        <label for="clr1">color</label>
+        <input type="color" name="clr1" />
+        <br />
+        <label for="date1">date</label>
+        <input type="date" name="date1" />
+        <br />
+        <label for="dtm1">datetime-local</label>
+        <input type="datetype-local" name="dtm1" />
+        <br />
+        <label for="eml1">email</label>
+        <input type="email" name="eml1" />
+        <br />
+        <label for="file1">file</label>
+        <input type="file" name="file1" />
+        <br />
+        <label for="hdn1">hidden</label>
+        <input type="hidden" name="hdn1" />
+        <br />
+        <label for="img1">image</label>
+        <input type="image" name="img1" />
+        <br />
+        <label for="mnt1">month</label>
+        <input type="month" name="mnt1" />
+        <br />
+        <label for="nmb1">number</label>
+        <input type="number" name="nmb1" />
+        <br />
+        <label for="pwd1">password</label>
+        <input type="password" name="pwd1" />
+        <br />
+        <label for="rdo1">radio</label>
+        <input type="radio" name="rdo1" />
+        <br />
+        <label for="rng1">range</label>
+        <input type="range" name="rng1" />
+        <br />
+        <label for="src1">search</label>
+        <input type="search" name="src1" />
+        <br />
+        <label for="tel1">tel</label>
+        <input type="tel" name="tel1" />
+        <br />
+        <label for="txt1">text</label>
+        <input type="text" name="txt1" />
+        <br />
+        <label for="url1">url</label>
+        <input type="url" name="url1" />
+        <br />
+        <input type="submit" value="submit" />
+        <input type="reset" value="clear" />
+      </form>
+    </Example>
+    <h2>aタグ</h2>
+    <p>aタグは、リンクを設定するタグです。<br />href属性にリンク先を設定します。</p>
+    <Example>
+      <a href="#">このページ自体のリンク</a><br />
+      <a href="/html"><button>見本ページへのリンク</button></a>
+    </Example>
+    <h2>ulタグ・liタグ</h2>
+    <p>ulタグとliタグは、箇条書きを設定するタグです。</p>
+    <Example>
+      <ul>
+        <li>item1</li>
+        <li>item2</li>
+        <li>item3</li>
+      </ul>
+    </Example>
+    <div class="sample" id="sample">
+      <h2>Sample Page</h2>
+      <form>
+        <label for="txt2">User Name</label>
+        <input type="text" name="txt2" v-model="id" />
+        <br />
+        <label for="pwd2">Password</label>
+        <input type="password" name="pwd2" v-model="pwd" />
+        <br />
+        <input type="submit" value="Login" @click="login(id,pwd)" />
+        <input type="reset" value="Clear" />
+      </form>
+      <br>
+      <p>デフォルトの認証情報は以下のとおりです。</p>
+      <table>
+        <tbody>
+          <tr>
+            <th>User Name</th>
+            <td>Admin</td>
+          </tr>
+          <tr>
+            <th>Password</th>
+            <td>Password</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </template>
+
+<style>
+.sample{
+  border: 4px solid #16a34a;
+  padding: 4px;
+  margin: 4px;
+}
+.sample h2{
+  background: linear-gradient(transparent 60%, #7dd3fc60 30%);
+}
+.sample label{
+  width: 6em;
+  display: inline-block;
+}
+table,tr,th,td{
+  border-collapse: collapse;
+  border: 1px solid #000000;
+  margin: 2px;
+}
+</style>
+
+<script>
+  import Vue from "vue";
+  export default {
+    el: "#sample",
+    data: {
+      id: "",
+      pwd: "",
+    },
+    methods: {
+      login: function(id, pwd) {
+        if (id == "Admin" && pwd == "Password") {
+          alert("Login Successful!")
+        }else{
+          alert("Login Failed")
+        }
+      }
+    }
+  }
+</script>
+
