@@ -16,11 +16,5 @@
       "@/*": ["./*"]
     },
     "types": ["@nuxt/types", "@types/node"]
-  },
-  {
-    "compilerOptions": {
-      "sourceMap": true
-    }
-  },
-  "exclude": ["node_modules", ".nuxt", "dist"]
+  }
 }
