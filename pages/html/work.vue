@@ -55,9 +55,11 @@ table,tr,th,td{
   import Vue from "vue";
   export default {
     el: "#sample",
-    data: {
-      id: "",
-      pwd: "",
+    data() {
+      return{
+        id: "",
+        pwd: ""
+      }
     },
     methods: {
       login: function(id, pwd) {
