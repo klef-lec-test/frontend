@@ -132,14 +132,21 @@
       <a href="#">このページ自体のリンク</a><br />
       <a href="/html"><button>見本ページへのリンク</button></a>
     </Example>
-    <h2>ulタグ・liタグ</h2>
-    <p>ulタグとliタグは、箇条書きを設定するタグです。</p>
+    <h2>ulタグ・olタグ・liタグ</h2>
+    <p>ulタグとolタグ・liタグは、箇条書きを設定するタグです。</p>
     <Example>
+      <p>ulタグ</p>
       <ul>
         <li>item1</li>
         <li>item2</li>
         <li>item3</li>
       </ul>
+      <p>olタグ</p>
+      <ol>
+        <li>item1</li>
+        <li>item2</li>
+        <li>item3</li>
+      </ol>
     </Example>
     <div class="sample" id="sample">
       <h2>Sample Page</h2>
