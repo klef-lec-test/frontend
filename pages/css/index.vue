@@ -55,6 +55,10 @@
     <Example>
       <p class="hover">ホバーすると下線が表示されます。</p>
     </Example>
+    <div class="sample">
+      <h2>Sample Color App</h2>
+      <input type="color" id="color" v-model="color" />
+    </div>
   </div>
 </template>
 
@@ -119,4 +123,18 @@ h2{
   border-left: 3px solid #fb7185;
   padding: 2px 6px;
 }
+.sample h2{
+  color: v-bind(color);
+}
 </style>
+
+<script>
+  import Vue from "vue";
+  export default{
+    data() {
+      return{
+        color: "#FF0000"
+      };
+    }
+  }
+</script>
